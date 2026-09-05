@@ -64,7 +64,9 @@
      Until a file exists, a labeled box shows what belongs there. */
   .ph{position:relative;margin:0;overflow:hidden;border:1px solid var(--line-strong);background:linear-gradient(135deg,var(--ink-2),var(--ink-3));min-height:200px;}
   .ph::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);line-height:2;}
-  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos,center);}
+  .ph-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:60px;}
+  @media (max-width:560px){.ph-row{grid-template-columns:1fr;}}
   .ph--wide{aspect-ratio:16/9;}
   .ph--std{aspect-ratio:3/2;}
   .ph--portrait{aspect-ratio:4/5;}
@@ -437,8 +439,8 @@
       <a href="#offerings" class="btn btn--primary">Start Learning</a>
       <a href="#community" class="btn btn--ghost">Book a Mentorship Call</a>
     </div>
-    <figure class="ph ph--wide ph--hero reveal" data-label="Photo 1 — Hero: dark trading desk, monitors with candlestick charts · 16:9">
-      <img src="images/hero-trading-desk.jpg" alt="Trading desk with monitors showing candlestick charts in a dark room" loading="lazy" onerror="this.remove()">
+    <figure class="ph ph--wide ph--hero reveal" data-label="Photo 1 — Hero: laptop with TradingView charts + skyline · 16:9">
+      <img src="images/hero-trading-desk.jpg" alt="Laptop showing TradingView charts with the Nairobi skyline behind" loading="lazy" style="--pos:center 55%" onerror="this.remove()">
     </figure>
   </div>
   <div class="ticker">
@@ -454,14 +456,14 @@
       <p>OVCapital is a premier financial markets education and investment platform dedicated to helping individuals develop the skills, discipline, and confidence needed to succeed in today's global financial markets.</p>
       <p>Unlike the "get-rich-quick" mentality, we treat trading as a professional discipline and a long-term investment journey — built on market structure, macroeconomics, technical analysis, and proper risk management.</p>
       <p>Whether you're a complete beginner or an experienced trader refining your edge, OVCapital provides the education, mentorship, and trading environment to help you reach your financial goals.</p>
-      <figure class="ph ph--std ph--about reveal" data-label="Photo 2 — Live analysis: over-shoulder trader studying charts · 3:2">
-        <img src="images/about-live-analysis.jpg" alt="Trader studying charts on a large monitor, over-the-shoulder view" loading="lazy" onerror="this.remove()">
+      <figure class="ph ph--std ph--about reveal" data-label="Photo 2 — At work: candid shot, you focused on the laptop · 3:2">
+        <img src="images/about-live-analysis.jpg" alt="Oluwa Vincent working through analysis on a laptop" loading="lazy" style="--pos:center 25%" onerror="this.remove()">
       </figure>
     </div>
     <div class="founder reveal">
       <div class="founder__badge">OV</div>
-      <figure class="ph ph--portrait ph--founder reveal" data-label="Photo 3 — Founder: portrait of Oluwa Vincent, dark background · 4:5">
-        <img src="images/founder-oluwa-vincent.jpg" alt="Portrait of OVCapital founder Oluwa Vincent" loading="lazy" onerror="this.remove()">
+      <figure class="ph ph--portrait ph--founder reveal" data-label="Photo 3 — Founder: you teaching at the whiteboard · 4:5">
+        <img src="images/founder-oluwa-vincent.jpg" alt="Oluwa Vincent teaching leverage and lot sizing on a whiteboard" loading="lazy" style="--pos:center 20%" onerror="this.remove()">
       </figure>
       <p class="founder__label">Founder</p>
       <h3 class="founder__name">Oluwa Vincent</h3>
@@ -483,9 +485,14 @@
       <p class="eyebrow">What We Offer</p>
       <h2>Every tool a serious trader needs, under one roof.</h2>
     </div>
-    <figure class="ph ph--wide ph--offerings reveal" data-label="Photo 4 — Mentorship: coach and trader reviewing a chart together · 16:9">
-      <img src="images/offerings-mentorship.jpg" alt="Mentor coaching a trader through a chart on a laptop" loading="lazy" onerror="this.remove()">
-    </figure>
+    <div class="ph-row">
+      <figure class="ph ph--std reveal" data-label="Photo 4a — With an investor: you and a client/partner · 3:2">
+        <img src="images/offerings-investor.jpg" alt="Oluwa Vincent with an investor client" loading="lazy" style="--pos:center 25%" onerror="this.remove()">
+      </figure>
+      <figure class="ph ph--std reveal" data-label="Photo 4b — Podcast: you and another trader on mics · 3:2">
+        <img src="images/offerings-podcast.jpg" alt="Oluwa Vincent recording a trading podcast with another trader" loading="lazy" style="--pos:center 30%" onerror="this.remove()">
+      </figure>
+    </div>
     <div class="offer-grid" id="offerGrid"></div>
   </div>
 </section>
@@ -497,7 +504,7 @@
       <h2>Built for traders who play the long game.</h2>
       <p>Every part of OVCapital is designed around one idea: consistency beats luck. Here's what that looks like in practice.</p>
       <figure class="ph ph--portrait ph--why reveal" data-label="Photo 5 — Discipline: journaling a trade, notebook beside laptop · 4:5">
-        <img src="images/why-discipline.jpg" alt="Trader writing in a trading journal beside a laptop" loading="lazy" onerror="this.remove()">
+        <img src="images/why-discipline.jpg" alt="Handwritten trading journal beside a laptop" loading="lazy" style="--pos:center 55%" onerror="this.remove()">
       </figure>
     </div>
     <ul class="why__list reveal" id="whyList"></ul>
@@ -549,8 +556,8 @@
     <p class="promise__quote">We don't promise overnight riches — <span>we build skilled traders and informed investors.</span></p>
     <p class="promise__sub">Our commitment is to equip you with the education, discipline, and professional support needed to navigate the financial markets with confidence and consistency.</p>
     <p class="promise__sign">Learn. Trade. Grow.</p>
-    <figure class="ph ph--wide ph--promise reveal" data-label="Photo 6 — Promise: gold bars or ticker-board macro, wealth mood · 16:9">
-      <img src="images/promise-gold.jpg" alt="Gold bars close-up symbolising lasting wealth" loading="lazy" onerror="this.remove()">
+    <figure class="ph ph--wide ph--promise reveal" data-label="Photo 6 — Promise: night lifestyle portrait, wealth mood · 16:9">
+      <img src="images/promise-lifestyle.jpg" alt="Oluwa Vincent at night, lifestyle portrait" loading="lazy" style="--pos:center 20%" onerror="this.remove()">
     </figure>
   </div>
 </section>
