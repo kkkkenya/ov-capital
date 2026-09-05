@@ -1,9 +1,8 @@
 OVCAPITAL — PHOTO GUIDE
 ======================
-Save each photo into THIS folder with the EXACT filename shown.
-Until a file exists, the site shows a labeled box in its place.
-Phone photos are 2-5 MB each — keep the originals, they get compressed
-before going live (target ~200-300 KB each, 1600px wide JPG).
+All 9 photos are live on the site. This file maps each filename to its
+section, so future swaps land in the right place.
+Keep uploads under ~300 KB (JPG, 1600px wide) for fast loading.
 
 SITE ORDER (top to bottom):
 
