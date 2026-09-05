@@ -62,7 +62,10 @@
   /* ---------- PHOTOS ---------- */
   .ph{position:relative;margin:0;overflow:hidden;border-radius:22px 28px 22px 28px;border:1px solid rgba(201,162,39,0.38);background:linear-gradient(135deg,var(--ink-2),var(--ink-3));box-shadow:0 24px 60px rgba(0,0,0,0.45),0 0 42px rgba(201,162,39,0.10);animation:ph-morph 12s ease-in-out infinite;}
   .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos,center);transition:transform .8s ease;}
+  .ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .ph:hover img{transform:scale(1.045);}
+  .ph--video{margin-bottom:18px;}
+  .video-cap{margin:0 0 44px;font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--slate);text-align:center;}
   .ph:hover{box-shadow:0 24px 70px rgba(0,0,0,0.55),0 0 64px rgba(201,162,39,0.20);}
   @keyframes ph-morph{0%,100%{border-radius:22px 28px 22px 28px;}50%{border-radius:30px 20px 30px 20px;}}
   .ph-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:60px;}
@@ -626,6 +629,10 @@
       <h2>Our trade journal — logged, scored, and public.</h2>
       <p class="journal__lead">Every trade we take is logged here in real time — entries, exits, risk, chart screenshots, and P&amp;L broken down by week, month, quarter, and year. No cherry-picking, no hindsight edits.</p>
     </div>
+    <figure class="ph ph--wide ph--video reveal" data-slot="video">
+      <video src="images/mt5-profits-phone.mp4" poster="images/mt5-profits-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+    </figure>
+    <p class="video-cap">Live MT5 positions · Gold buys running profit</p>
     <div class="journal__frame reveal" id="journal-app-root"></div>
     <div class="journal__foot">
       <a href="journal.html" target="_blank" rel="noopener" class="btn btn--ghost">Open Standalone Version</a>
@@ -803,6 +810,11 @@
     revealEls.forEach(el=>io.observe(el));
   } else {
     revealEls.forEach(el=>el.classList.add('in-view'));
+  }
+
+  // ---- Respect reduced motion: don't autoplay the proof video ----
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.querySelectorAll('video[autoplay]').forEach(v=>{ v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls',''); });
   }
 
   // ---- Mobile nav toggle ----
