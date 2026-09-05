@@ -65,8 +65,8 @@
   .ph{position:relative;margin:0;overflow:hidden;border:1px solid var(--line-strong);background:linear-gradient(135deg,var(--ink-2),var(--ink-3));min-height:200px;}
   .ph::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);line-height:2;}
   .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:var(--pos,center);}
-  .ph-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:60px;}
-  @media (max-width:560px){.ph-row{grid-template-columns:1fr;}}
+  .ph-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:60px;}
+  @media (max-width:900px){.ph-row{grid-template-columns:1fr;}}
   .ph--wide{aspect-ratio:16/9;}
   .ph--std{aspect-ratio:3/2;}
   .ph--portrait{aspect-ratio:4/5;}
@@ -462,8 +462,8 @@
     </div>
     <div class="founder reveal">
       <div class="founder__badge">OV</div>
-      <figure class="ph ph--portrait ph--founder reveal" data-label="Photo 3 — Founder: you teaching at the whiteboard · 4:5">
-        <img src="images/founder-oluwa-vincent.jpg" alt="Oluwa Vincent teaching leverage and lot sizing on a whiteboard" loading="lazy" style="--pos:center 20%" onerror="this.remove()">
+      <figure class="ph ph--portrait ph--founder reveal" data-label="Photo 3 — Founder: portrait of Oluwa Vincent · 4:5">
+        <img src="images/founder-oluwa-vincent.jpg" alt="Portrait of OVCapital founder Oluwa Vincent" loading="lazy" style="--pos:center 20%" onerror="this.remove()">
       </figure>
       <p class="founder__label">Founder</p>
       <h3 class="founder__name">Oluwa Vincent</h3>
@@ -491,6 +491,9 @@
       </figure>
       <figure class="ph ph--std reveal" data-label="Photo 4b — Podcast: you and another trader on mics · 3:2">
         <img src="images/offerings-podcast.jpg" alt="Oluwa Vincent recording a trading podcast with another trader" loading="lazy" style="--pos:center 30%" onerror="this.remove()">
+      </figure>
+      <figure class="ph ph--std reveal" data-label="Photo 4c — Teaching: leverage masterclass at the whiteboard · 3:2">
+        <img src="images/offerings-teaching.jpg" alt="Oluwa Vincent teaching leverage and lot sizing on a whiteboard" loading="lazy" style="--pos:center 25%" onerror="this.remove()">
       </figure>
     </div>
     <div class="offer-grid" id="offerGrid"></div>

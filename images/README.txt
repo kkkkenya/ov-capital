@@ -16,8 +16,8 @@ SITE ORDER (top to bottom):
    Beside "Trading is a professional skill". Proof of the work ethic.
 
 3. founder-oluwa-vincent.jpg (portrait frame)
-   YOUR photo #5 — you teaching leverage at the whiteboard.
-   The founder card. Authority + face in one shot.
+   The bonus headshot — you seated in the office, charts on the
+   monitor behind. The founder card. Face-forward and professional.
 
 4a. offerings-investor.jpg
     YOUR photo #1 — you with the investor.
@@ -26,7 +26,11 @@ SITE ORDER (top to bottom):
 
 4b. offerings-podcast.jpg
     YOUR photo #2 — podcast with the other trader.
-    Sits beside 4a. Shows you teach and talk markets publicly.
+    Shows you teach and talk markets publicly.
+
+4c. offerings-teaching.jpg
+    YOUR photo #5 — you teaching leverage at the whiteboard.
+    The education offering, literally pictured. Completes the row.
 
 5. why-discipline.jpg (portrait frame)
    YOUR photo #3 — handwritten journal + watch + laptop.
