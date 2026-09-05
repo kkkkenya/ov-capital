@@ -59,6 +59,23 @@
   .mono{font-family:'IBM Plex Mono', monospace;}
   ::selection{background:var(--gold);color:var(--ink);}
 
+  /* ---------- PHOTO PLACEHOLDERS ---------- */
+  /* Drop your photos into the images/ folder using the filenames below.
+     Until a file exists, a labeled box shows what belongs there. */
+  .ph{position:relative;margin:0;overflow:hidden;border:1px solid var(--line-strong);background:linear-gradient(135deg,var(--ink-2),var(--ink-3));min-height:200px;}
+  .ph::after{content:attr(data-label);position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:28px;font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--slate);line-height:2;}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .ph--wide{aspect-ratio:16/9;}
+  .ph--std{aspect-ratio:3/2;}
+  .ph--portrait{aspect-ratio:4/5;}
+  .ph--hero{max-width:880px;margin:52px auto 0;}
+  .ph--about{margin-top:28px;}
+  .ph--founder{margin:0 0 22px;}
+  .ph--offerings{margin-bottom:60px;}
+  .ph--why{margin-top:28px;max-width:340px;}
+  .ph--promise{max-width:880px;margin:52px auto 0;}
+  .ph--community{max-width:880px;margin:52px auto 0;}
+
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
   .reveal.in-view{opacity:1;transform:translateY(0);}
@@ -420,6 +437,9 @@
       <a href="#offerings" class="btn btn--primary">Start Learning</a>
       <a href="#community" class="btn btn--ghost">Book a Mentorship Call</a>
     </div>
+    <figure class="ph ph--wide ph--hero reveal" data-label="Photo 1 — Hero: dark trading desk, monitors with candlestick charts · 16:9">
+      <img src="images/hero-trading-desk.jpg" alt="Trading desk with monitors showing candlestick charts in a dark room" loading="lazy" onerror="this.remove()">
+    </figure>
   </div>
   <div class="ticker">
     <div class="ticker__track" id="tickerTrack"></div>
@@ -434,9 +454,15 @@
       <p>OVCapital is a premier financial markets education and investment platform dedicated to helping individuals develop the skills, discipline, and confidence needed to succeed in today's global financial markets.</p>
       <p>Unlike the "get-rich-quick" mentality, we treat trading as a professional discipline and a long-term investment journey — built on market structure, macroeconomics, technical analysis, and proper risk management.</p>
       <p>Whether you're a complete beginner or an experienced trader refining your edge, OVCapital provides the education, mentorship, and trading environment to help you reach your financial goals.</p>
+      <figure class="ph ph--std ph--about reveal" data-label="Photo 2 — Live analysis: over-shoulder trader studying charts · 3:2">
+        <img src="images/about-live-analysis.jpg" alt="Trader studying charts on a large monitor, over-the-shoulder view" loading="lazy" onerror="this.remove()">
+      </figure>
     </div>
     <div class="founder reveal">
       <div class="founder__badge">OV</div>
+      <figure class="ph ph--portrait ph--founder reveal" data-label="Photo 3 — Founder: portrait of Oluwa Vincent, dark background · 4:5">
+        <img src="images/founder-oluwa-vincent.jpg" alt="Portrait of OVCapital founder Oluwa Vincent" loading="lazy" onerror="this.remove()">
+      </figure>
       <p class="founder__label">Founder</p>
       <h3 class="founder__name">Oluwa Vincent</h3>
       <p class="founder__role">Founder, OVCapital</p>
@@ -457,6 +483,9 @@
       <p class="eyebrow">What We Offer</p>
       <h2>Every tool a serious trader needs, under one roof.</h2>
     </div>
+    <figure class="ph ph--wide ph--offerings reveal" data-label="Photo 4 — Mentorship: coach and trader reviewing a chart together · 16:9">
+      <img src="images/offerings-mentorship.jpg" alt="Mentor coaching a trader through a chart on a laptop" loading="lazy" onerror="this.remove()">
+    </figure>
     <div class="offer-grid" id="offerGrid"></div>
   </div>
 </section>
@@ -467,6 +496,9 @@
       <p class="eyebrow">Why OVCapital</p>
       <h2>Built for traders who play the long game.</h2>
       <p>Every part of OVCapital is designed around one idea: consistency beats luck. Here's what that looks like in practice.</p>
+      <figure class="ph ph--portrait ph--why reveal" data-label="Photo 5 — Discipline: journaling a trade, notebook beside laptop · 4:5">
+        <img src="images/why-discipline.jpg" alt="Trader writing in a trading journal beside a laptop" loading="lazy" onerror="this.remove()">
+      </figure>
     </div>
     <ul class="why__list reveal" id="whyList"></ul>
   </div>
@@ -517,6 +549,9 @@
     <p class="promise__quote">We don't promise overnight riches — <span>we build skilled traders and informed investors.</span></p>
     <p class="promise__sub">Our commitment is to equip you with the education, discipline, and professional support needed to navigate the financial markets with confidence and consistency.</p>
     <p class="promise__sign">Learn. Trade. Grow.</p>
+    <figure class="ph ph--wide ph--promise reveal" data-label="Photo 6 — Promise: gold bars or ticker-board macro, wealth mood · 16:9">
+      <img src="images/promise-gold.jpg" alt="Gold bars close-up symbolising lasting wealth" loading="lazy" onerror="this.remove()">
+    </figure>
   </div>
 </section>
 
@@ -529,6 +564,9 @@
       <a href="#" class="btn btn--primary">Start Your Journey</a>
       <a href="#" class="btn btn--ghost">Talk to a Mentor</a>
     </div>
+    <figure class="ph ph--wide ph--community reveal" data-label="Photo 7 — Community: trader meetup or workshop group photo · 16:9">
+      <img src="images/community-meetup.jpg" alt="OVCapital trader meetup and workshop group" loading="lazy" onerror="this.remove()">
+    </figure>
     <div class="community__marquee">
       <span>Trade Smart. Invest Wisely.</span>
       <span>Where Education Meets Opportunity.</span>
