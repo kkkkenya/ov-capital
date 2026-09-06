@@ -41,9 +41,11 @@ WHY — why-discipline.jpg (portrait frame)
 PROMISE — text only, no photo.
    The quote carries this section; visuals resume below.
 
-COMMUNITY (2 side by side, portrait frames) —
+COMMUNITY (3 side by side, portrait frames, full width) —
    community-meetup.jpg — the classroom workshop session.
       The week-to-week grind.
+   community-meetup-2.jpg — live class close-up: laptop with
+      TradingView chart, students and projector behind, OVCapital
+      card in frame. Branded proof — the centerpiece.
    community-conference.jpg — the live conference hall, packed
-      audience. The big-room energy. Together: the community
-      at both scales.
+      audience. The big-room energy.
