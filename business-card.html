@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OVCapital — Business Card (Print-Ready)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A1526;
+    --ink-2:#0F2038;
+    --gold:#C9A227;
+    --gold-bright:#E7C568;
+    --paper:#EEEAE0;
+    --slate:#8B96A8;
+    --line: rgba(238,234,224,0.14);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:#060C18;color:var(--paper);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:48px 24px 80px;
+  }
+  .page{max-width:1000px;margin:0 auto}
+  .page__head{text-align:center;margin-bottom:36px}
+  .page__head h1{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:32px;margin:12px 0 8px;
+  }
+  .page__head h1 em{color:var(--gold);font-style:normal}
+  .page__head p{color:var(--slate);font-size:14px;max-width:620px;margin:0 auto}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+  }
+  .cards{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;align-items:flex-start}
+  .card-wrap{display:flex;flex-direction:column;gap:12px;align-items:center}
+  .card-label{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--slate);
+  }
+  /* ---- 85mm x 55mm exact ---- */
+  .bcard{
+    width:85mm;height:55mm;
+    background:var(--ink);
+    position:relative;overflow:hidden;flex:none;
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:6mm 7mm;
+    border:1px solid rgba(201,162,39,.35);
+    box-shadow:0 24px 60px rgba(0,0,0,.5);
+  }
+  /* subtle chart line like hero */
+  .bcard::after{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;
+    background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 220" preserveAspectRatio="none"><polyline points="0,150 40,135 80,145 120,100 160,115 200,70 240,90 280,45 340,30" fill="none" stroke="%23C9A227" stroke-width="1.2"/></svg>') center/cover no-repeat;
+  }
+  .bcard__inner{position:relative;z-index:2;display:flex;flex-direction:column;height:100%;justify-content:space-between}
+  .bcard__top{display:flex;align-items:center;gap:3.2mm}
+  .badge{
+    width:9.5mm;height:9.5mm;flex:none;
+    border:.4mm solid var(--gold);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-size:3.4mm;font-weight:600;
+    color:var(--gold);letter-spacing:.02em;
+  }
+  .wordmark{font-family:'Fraunces',serif;font-weight:600;font-size:5.2mm;line-height:1;letter-spacing:.01em}
+  .wordmark em{color:var(--gold);font-style:normal}
+  .wordmark small{
+    display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;
+    font-size:1.9mm;letter-spacing:.22em;color:var(--slate);margin-top:1.2mm;text-transform:uppercase;
+  }
+  .bcard__mid h2{
+    font-family:'Fraunces',serif;font-weight:500;font-size:5.8mm;line-height:1.15;margin:0;
+  }
+  .bcard__mid h2 em{color:var(--gold);font-style:italic}
+  .bcard__mid p{
+    font-family:'IBM Plex Mono',monospace;font-size:2.4mm;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--slate);margin:2mm 0 0;
+  }
+  .bcard__bot{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    border-top:1px solid var(--line);padding-top:3mm;margin-top:3mm;
+    font-family:'IBM Plex Mono',monospace;font-size:2.4mm;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--paper);
+  }
+  .bcard__bot span{color:var(--slate)}
+  .bcard__bot b{color:var(--gold);font-weight:600}
+  .gold-rule{width:12mm;height:.5mm;background:var(--gold);margin:0 0 3mm}
+  /* BACK specifics */
+  .back-grid{display:flex;justify-content:space-between;gap:6mm;height:100%}
+  .back-left{flex:1;display:flex;flex-direction:column;justify-content:center}
+  .back-name{font-family:'Fraunces',serif;font-weight:600;font-size:5.5mm;margin:0;line-height:1.1}
+  .back-role{font-family:'IBM Plex Mono',monospace;font-size:2.4mm;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:1.5mm 0 3mm}
+  .back-contact{font-family:'IBM Plex Mono',monospace;font-size:2.5mm;line-height:1.9;color:var(--paper)}
+  .back-contact span{color:var(--slate)}
+  .back-contact a{color:inherit;text-decoration:none}
+  .back-right{
+    width:22mm;flex:none;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border-left:1px solid var(--line);padding-left:5mm;gap:2.5mm;
+  }
+  .qr{
+    width:17mm;height:17mm;background:#fff;padding:1.5mm;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .qr img{width:100%;height:100%;object-fit:contain}
+  .qr-cap{font-family:'IBM Plex Mono',monospace;font-size:1.9mm;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);text-align:center;line-height:1.5}
+  /* controls / specs */
+  .toolbar{display:flex;gap:12px;justify-content:center;margin:32px 0;flex-wrap:wrap}
+  .btn{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;
+    padding:12px 22px;border:1px solid var(--gold);cursor:pointer;
+  }
+  .btn--solid{background:var(--gold);color:var(--ink)}
+  .btn--ghost{background:transparent;color:var(--paper);border-color:rgba(238,234,224,.25)}
+  .specs{
+    margin:36px auto 0;max-width:720px;
+    border:1px solid var(--line);background:var(--ink-2);
+    padding:24px 26px;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;
+  }
+  .specs h3{grid-column:1/-1;font-family:'Fraunces',serif;margin:0;font-size:19px}
+  .specs div{font-size:13px;color:var(--paper)}
+  .specs code{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold-bright)}
+  .specs span{color:var(--slate);display:block;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+  .note{max-width:720px;margin:18px auto 0;font-size:12.5px;color:var(--slate);line-height:1.7;text-align:center}
+  @media(max-width:700px){.specs{grid-template-columns:1fr}}
+  @media print{
+    @page{size:A4;margin:10mm}
+    body{background:#fff;padding:0}
+    .page__head,.toolbar,.specs,.note,.card-label{display:none!important}
+    .page{max-width:none}
+    .cards{gap:6mm}
+    .bcard{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="page__head">
+    <div class="eyebrow">OVCapital — Dark Luxe Identity</div>
+    <h1>Business Card <em>Front &amp; Back</em></h1>
+    <p>85mm × 55mm (EU) / 3.5&Prime; × 2&Prime; (US) · Matte stock + gold foil · Fonts: Fraunces + IBM Plex Mono</p>
+  </div>
+
+  <div class="cards">
+    <!-- FRONT -->
+    <div class="card-wrap">
+      <div class="card-label">Front</div>
+      <div class="bcard">
+        <div class="bcard__inner">
+          <div class="bcard__top">
+            <div class="badge">OV</div>
+            <div class="wordmark">OV<em>Capital</em><small>Master the Markets</small></div>
+          </div>
+          <div class="bcard__mid">
+            <div class="gold-rule"></div>
+            <h2>Build Lasting <em>Wealth.</em></h2>
+            <p>Forex · Gold · Indices · Commodities</p>
+          </div>
+          <div class="bcard__bot">
+            <div><span>Learn.</span> <span>Trade.</span> <b>Grow.</b></div>
+            <div>@ovcapital</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACK -->
+    <div class="card-wrap">
+      <div class="card-label">Back</div>
+      <div class="bcard">
+        <div class="bcard__inner">
+          <div class="back-grid">
+            <div class="back-left">
+              <p class="back-name">Oluwa Vincent</p>
+              <p class="back-role">Founder, OVCapital</p>
+              <div class="back-contact">
+                <div><span>T </span><a href="tel:+254705464197">+254 705 464 197</a></div>
+                <div><span>E </span><a href="mailto:info@ovcapital.com">info@ovcapital.com</a></div>
+                <div><span>W </span>WhatsApp · Telegram</div>
+                <div><span>S </span>@ovcapital</div>
+              </div>
+            </div>
+            <div class="back-right">
+              <div class="badge" style="width:8mm;height:8mm;font-size:2.9mm">OV</div>
+              <div class="qr">
+                <!-- Replace src with your real QR (WhatsApp / linktree). Placeholder uses api.qrserver -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=0&data=https://wa.me/254705464197" alt="QR to WhatsApp OVCapital">
+              </div>
+              <div class="qr-cap">Scan to<br>chat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn btn--solid" onclick="window.print()">Print / Save PDF</button>
+    <a class="btn btn--ghost" style="text-decoration:none" href="index.html">← Back to site</a>
+  </div>
+
+  <div class="specs">
+    <h3>Design Specs for Printer / Designer</h3>
+    <div><span>Background</span><code>#0A1526</code> Deep Navy (your --ink)</div>
+    <div><span>Primary Accent</span><code>#C9A227</code> Gold (your --gold) — foil stamp</div>
+    <div><span>Text Primary</span><code>#EEEAE0</code> Warm White</div>
+    <div><span>Text Secondary</span><code>#8B96A8</code> Slate</div>
+    <div><span>Headline Font</span><code>Fraunces, serif — 600</code></div>
+    <div><span>Body / Detail Font</span><code>IBM Plex Mono — 11px, 0.14em, uppercase</code></div>
+    <div><span>Card Size</span><code>85mm × 55mm + 3mm bleed</code></div>
+    <div><span>Finish</span><code>Matte black stock + gold foil stamp</code></div>
+  </div>
+  <p class="note">
+    To print: click Print / Save PDF → set to A4, 100% scale, Background graphics ON.<br>
+    For foil: send this file + your vector OV badge (SVG/AI) to the print shop and ask for gold foil on <code>#C9A227</code> elements.<br>
+    Edit contact details directly in <code>business-card.html</code> — search for Oluwa Vincent / info@ovcapital.com / wa.me.
+  </p>
+</div>
+</body>
+</html>

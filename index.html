@@ -350,19 +350,11 @@
   }
 
   /* ---------- COACHING ---------- */
-  .coaching{padding:120px 0;border-bottom:1px solid var(--line);}
-  .coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:56px 0 44px;}
-  .coach-card{position:relative;border:1px solid var(--line-strong);background:var(--ink-2);padding:40px 36px;}
-  .coach-card::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-bright),var(--gold));}
-  .coach-card__tag{font-family:'IBM Plex Mono', monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-  .coach-card h3{font-family:'Fraunces', serif;font-weight:600;font-size:24px;margin-bottom:12px;}
-  .coach-card p{font-size:14.5px;color:var(--paper-dim);margin-bottom:20px;}
-  .coach-card ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);}
-  .coach-card li{padding:12px 0 12px 26px;border-bottom:1px solid var(--line);font-size:14px;color:var(--paper-dim);position:relative;}
-  .coach-card li::before{content:"▸";position:absolute;left:4px;color:var(--gold);}
-  .coach-cta{text-align:center;}
-  .coach-fomo{margin-top:22px;font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);}
-  @media (max-width:900px){.coach-grid{grid-template-columns:1fr;}}
+  .coaching{padding:120px 0;border-bottom:1px solid var(--line);text-align:center;}
+  .coaching .section-head{margin:0 auto;}
+  .ph--coach{max-width:620px;margin:52px auto 0;}
+  .coach-cta{margin-top:34px;text-align:center;}
+  .coach-fomo{margin-top:18px;font-family:'IBM Plex Mono', monospace;font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--slate);}
 
   /* ---------- MARKETS ---------- */
   .markets{padding:120px 0;border-bottom:1px solid var(--line);}
@@ -645,35 +637,14 @@
       <p class="eyebrow">Live coaching on Discord</p>
       <h2>Stop trading alone.</h2>
       <!-- ADJUST: session rhythm below (days/times) to match the real timetable -->
-      <p class="journal__lead">Every week, OVCapital traders open their screens and trade live — calling entries, managing risk, and answering questions in real time. Take a coach in your corner, or a seat at the desk. This is the only way the skill sticks: live.</p>
+      <p class="journal__lead">Every week, OVCapital traders open their screens and trade live — calling entries, managing risk, and answering questions in real time. Come 1-on-1 with a personal coach, or take a seat at the group desk. Either way, you never trade alone again.</p>
     </div>
-    <div class="coach-grid">
-      <div class="coach-card reveal">
-        <p class="coach-card__tag">1-on-1 Mentorship</p>
-        <h3>A coach in your corner.</h3>
-        <p>Personal trade reviews, a plan built around your capital and schedule, and direct access to a professional trader.</p>
-        <!-- ADJUST: deliverables below to match the real mentorship package -->
-        <ul>
-          <li>Weekly 1-on-1 review calls</li>
-          <li>Custom trading plan</li>
-          <li>Direct message access</li>
-        </ul>
-      </div>
-      <div class="coach-card reveal">
-        <p class="coach-card__tag">Group live sessions</p>
-        <h3>A desk to sit at.</h3>
-        <p>Trade the opens live with the community on Discord — real callouts, real Q&amp;A, real accountability.</p>
-        <!-- ADJUST: sessions and seat caps below to match reality -->
-        <ul>
-          <li>Live London &amp; New York sessions</li>
-          <li>Real-time trade callouts</li>
-          <li>Capped seats per session</li>
-        </ul>
-      </div>
-    </div>
+    <figure class="ph ph--portrait ph--coach reveal" data-slot="coaching-discord">
+      <img src="images/community-discord-call.jpg" alt="Live Discord coaching room with students on screen and charts on triple monitors" loading="lazy" onerror="this.remove()">
+    </figure>
     <div class="coach-cta reveal">
       <!-- REPLACE # with the real Discord invite link -->
-      <a href="#" class="btn btn--primary">Claim your seat</a>
+      <a href="#" class="btn btn--ghost">Claim your seat</a>
       <!-- ADJUST: intake rhythm below to match reality -->
       <p class="coach-fomo">New intake every month · Seats capped · Once they're gone, the doors close until next intake</p>
     </div>
