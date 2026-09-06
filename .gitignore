@@ -4,6 +4,14 @@ logs
 server.log
 server.err.log
 
+# Keep the repo to site files only — no browser-saved pages,
+# exports, card designs, or tooling leftovers
+business-card.html
+*Card Design*.html
+*_files/
+node_modules/
+dist/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
