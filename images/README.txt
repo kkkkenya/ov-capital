@@ -7,10 +7,11 @@ for fast loading.
 
 SITE ORDER (top to bottom):
 
-WATCH (own section, after the programs) — mt5-profits-phone.mp4
+HERO (below the headline and buttons) — mt5-profits-phone.mp4
    (+ mt5-profits-poster.jpg)
    Rotating phone with live MT5 Gold positions. Autoplays muted on
-   loop, large and centered. The proof stage of the page.
+   loop, large and centered, presented as a visual call to action
+   with no links on it. The proof stage of the page.
 
 JOURNAL — community-discord-call.jpg (portrait frame)
    The Discord coaching desk: students on screen, charts on
