@@ -364,7 +364,9 @@
   .markets__chart .tradingview-widget-container{height:100%;}
   .markets__note{margin-top:16px;font-family:'IBM Plex Mono', monospace;font-size:11.5px;color:var(--slate);text-align:center;}
   .markets__note a{color:var(--gold);}
-  @media (max-width:560px){.markets__chart{height:440px;}}
+  .markets__mobile-note{display:none;margin-top:16px;font-family:'IBM Plex Mono', monospace;font-size:12px;color:var(--slate);text-align:center;}
+  .markets__mobile-note a{color:var(--gold);}
+  @media (max-width:700px){.markets__chart{display:none;}.markets__mobile-note{display:block;}}
 
   /* ---------- WHATSAPP ---------- */
   .wa-float{position:fixed;right:calc(20px + env(safe-area-inset-right, 0px));bottom:calc(20px + env(safe-area-inset-bottom, 0px));z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.45),0 0 0 1px rgba(0,0,0,0.3);transition:transform .25s ease,box-shadow .25s ease;animation:wa-pulse 2.6s ease-out infinite;}
@@ -611,30 +613,13 @@
       </div>
     </div>
     <div class="markets__chart reveal">
-      <!-- TradingView Advanced Real-Time Chart -->
-      <div class="tradingview-widget-container" style="height:100%;width:100%">
+      <!-- TradingView Advanced Real-Time Chart (script injected on larger screens only — see bottom script) -->
+      <div class="tradingview-widget-container" id="tvChartBox" style="height:100%;width:100%">
         <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
         <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span>Track all markets on TradingView</span></a></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-        {
-          "symbol": "OANDA:XAUUSD",
-          "interval": "D",
-          "timezone": "Africa/Nairobi",
-          "theme": "dark",
-          "style": "1",
-          "locale": "en",
-          "backgroundColor": "rgba(14, 17, 22, 1)",
-          "gridColor": "rgba(238, 234, 224, 0.06)",
-          "hide_top_toolbar": false,
-          "hide_legend": false,
-          "allow_symbol_change": true,
-          "save_image": false,
-          "calendar": false,
-          "support_host": "https://www.tradingview.com"
-        }
-        </script>
       </div>
     </div>
+    <p class="markets__mobile-note">Full interactive chart lives on larger screens — <a href="https://discord.gg/62k2fDP6Jb" target="_blank" rel="noopener">join Discord</a> for the live sessions.</p>
     <p class="markets__note">Charts by <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a> · For education, not financial advice.</p>
   </div>
 </section>
@@ -835,9 +820,31 @@
     revealEls.forEach(el=>el.classList.add('in-view'));
   }
 
-  // ---- Save mobile data: stream the proof video lightly on small screens ----
-  if((window.matchMedia && window.matchMedia('(max-width:900px)').matches) || (navigator.connection && navigator.connection.saveData)){
-    document.querySelectorAll('video').forEach(v=>{ v.preload='metadata'; });
+  // ---- Make autoplay reliable on mobile: muted must be set as a property,
+  // ---- not just an attribute, and playback needs a nudge on first touch ----
+  document.querySelectorAll('video[autoplay]').forEach(v=>{
+    v.muted = true;
+    v.setAttribute('muted','');
+    var tryPlay = function(){ var p = v.play(); if(p && p.catch){ p.catch(function(){}); } };
+    tryPlay();
+    ['touchstart','pointerdown'].forEach(function(ev){
+      window.addEventListener(ev, tryPlay, {once:true, passive:true});
+    });
+    document.addEventListener('visibilitychange', function(){
+      if(!document.hidden){ tryPlay(); }
+    });
+  });
+
+  // ---- Load the heavy TradingView chart only on larger screens ----
+  if(window.matchMedia && window.matchMedia('(min-width:701px)').matches){
+    var tvBox = document.getElementById('tvChartBox');
+    if(tvBox){
+      var tv = document.createElement('script');
+      tv.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+      tv.async = true;
+      tv.innerHTML = '{"symbol":"OANDA:XAUUSD","interval":"D","timezone":"Africa/Nairobi","theme":"dark","style":"1","locale":"en","backgroundColor":"rgba(14, 17, 22, 1)","gridColor":"rgba(238, 234, 224, 0.06)","hide_top_toolbar":false,"hide_legend":false,"allow_symbol_change":true,"save_image":false,"calendar":false,"support_host":"https://www.tradingview.com"}';
+      tvBox.appendChild(tv);
+    }
   }
 
   // ---- Respect reduced motion: don't autoplay the proof video ----
