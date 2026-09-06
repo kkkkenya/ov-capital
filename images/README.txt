@@ -1,47 +1,45 @@
-OVCAPITAL — PHOTO GUIDE
-======================
-All 9 photos are live on the site. This file maps each filename to its
+OVCAPITAL — PHOTO & VIDEO GUIDE
+=================================
+All visuals are live on the site. This file maps each file to its
 section, so future swaps land in the right place.
-Keep uploads under ~300 KB (JPG, 1600px wide) for fast loading.
+Keep uploads under ~300 KB (JPG, 1600px wide) and video under ~1 MB
+for fast loading.
 
 SITE ORDER (top to bottom):
 
-1. hero-trading-desk.jpg (landscape frame)
-   YOUR photo #4 — laptop showing TradingView charts + Nairobi skyline.
-   The homepage hero. Shows real analysis in a real place.
+HERO — mt5-profits-phone.mp4 (+ mt5-profits-poster.jpg)
+   Rotating phone with live MT5 Gold positions. Autoplays muted on
+   loop, right side of the homepage headline (~70% of the hero).
 
-2. about-live-analysis.jpg
-   YOUR photo #6 — candid shot of you focused on the laptop.
-   Beside "Trading is a professional skill". Proof of the work ethic.
+JOURNAL — hero-trading-desk.jpg (landscape frame)
+   Laptop with TradingView charts + Nairobi skyline.
+   Above the public trade journal. Analysis-proof for the
+   "logged, scored, and public" claim.
 
-3. founder-oluwa-vincent.jpg (portrait frame)
-   The bonus headshot — you seated in the office, charts on the
-   monitor behind. The founder card. Face-forward and professional.
+ABOUT — about-live-analysis.jpg
+   Candid shot, focused on the laptop.
+   Beside "Trading is a professional skill".
 
-4a. offerings-investor.jpg
-    YOUR photo #1 — you with the investor.
-    Above the program cards, next to 4b. Signals that serious
-    people trust you with capital (Account Management narrative).
+FOUNDER — founder-oluwa-vincent.jpg (portrait frame)
+   Seated office portrait, charts on the monitor behind.
+   The founder card.
 
-4b. offerings-podcast.jpg
-    YOUR photo #2 — podcast with the other trader.
-    Shows you teach and talk markets publicly.
+OFFERINGS (3 side by side) —
+   offerings-investor.jpg — with the investor. Serious people
+      trust you with capital (Account Management narrative).
+   offerings-podcast.jpg — podcast with the other trader.
+      You teach and talk markets publicly.
+   offerings-teaching.jpg — leverage masterclass at the whiteboard.
+      The education offering, literally pictured.
 
-4c. offerings-teaching.jpg
-    YOUR photo #5 — you teaching leverage at the whiteboard.
-    The education offering, literally pictured. Completes the row.
+WHY — why-discipline.jpg (portrait frame)
+   Handwritten journal + watch + laptop.
+   Beside "consistency beats luck". The most on-message photo here.
 
-5. why-discipline.jpg (portrait frame)
-   YOUR photo #3 — handwritten journal + watch + laptop.
-   Beside "consistency beats luck". The single most on-message
-   photo in the set — do not skip this one.
+PROMISE — community-meetup.jpg (portrait frame)
+   The classroom/workshop session.
+   Under "we build skilled traders" — education proven, not promised.
 
-6. promise-lifestyle.jpg (landscape frame)
-   YOUR photo #7 — night lifestyle shot by the car.
-   Under "Learn. Trade. Grow." Dark and moody like the site itself.
-
-7. community-meetup.jpg (landscape frame)
-   YOUR photo #8 — the classroom/workshop with projector.
-   Under the Join buttons. Genuine > stock, and this one is genuine.
-
-PRIORITY IF SHORT ON TIME: 5, 3, 7, 1, 4a+4b — then the rest.
+COMMUNITY — community-conference.jpg (portrait frame)
+   The live conference hall, packed audience, you on stage.
+   Under "Start Your Journey". The room they are joining.
