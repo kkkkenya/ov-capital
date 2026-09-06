@@ -189,11 +189,17 @@
     overflow:hidden;
     padding:16px 0;
   }
+  .ticker{
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  }
   .ticker__track{
     display:flex;
     width:max-content;
-    animation:scroll-left 34s linear infinite;
+    will-change:transform;
+    animation:scroll-left 44s linear infinite;
   }
+  .ticker:hover .ticker__track{animation-play-state:paused;}
   @keyframes scroll-left{
     from{transform:translateX(0);}
     to{transform:translateX(-50%);}
@@ -743,13 +749,13 @@
   function renderTicker(){
     const track = document.getElementById('tickerTrack');
     const arrow = {up:'▲', down:'▼'};
-    let html = '';
-    for(let rep=0; rep<2; rep++){
-      tickerData.forEach(t=>{
-        html += `<div class="ticker__item"><b>${t.sym}</b><span class="ticker__${t.dir}">${arrow[t.dir]}</span></div>`;
-      });
-    }
-    track.innerHTML = html;
+    // Build ONE identical set, then duplicate it: shifting the track by
+    // exactly -50% lands on a pixel-perfect copy, so the loop is seamless.
+    let set = '';
+    tickerData.forEach(t=>{
+      set += `<div class="ticker__item"><b>${t.sym}</b><span class="ticker__${t.dir}">${arrow[t.dir]}</span></div>`;
+    });
+    track.innerHTML = set + `<div style="display:flex" aria-hidden="true">${set}</div>`;
   }
   renderTicker();
 
