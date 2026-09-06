@@ -12,10 +12,10 @@ WATCH (own section, after the programs) — mt5-profits-phone.mp4
    Rotating phone with live MT5 Gold positions. Autoplays muted on
    loop, large and centered. The proof stage of the page.
 
-JOURNAL — hero-trading-desk.jpg (landscape frame)
-   Laptop with TradingView charts + Nairobi skyline.
-   Above the public trade journal. Analysis-proof for the
-   "logged, scored, and public" claim.
+JOURNAL — community-discord-call.jpg (portrait frame)
+   The Discord coaching desk: students on screen, charts on
+   triple monitors. Above the public trade journal — the room
+   behind the logged trades.
 
 ABOUT — about-live-analysis.jpg
    Candid shot, focused on the laptop.
@@ -41,10 +41,6 @@ PROMISE — community-meetup.jpg (portrait frame)
    The classroom/workshop session.
    Under "we build skilled traders" — education proven, not promised.
 
-COMMUNITY (2 side by side, portrait frames) —
-   community-conference.jpg — the live conference hall, packed
-      audience. The big-room energy.
-   community-discord-call.jpg — the Discord coaching room:
-      students on screen, charts on triple monitors, KL towers
-      outside. The week-to-week reality. Together they say:
-      big events AND live online rooms.
+COMMUNITY — community-conference.jpg (portrait frame)
+   The live conference hall, packed audience, you on stage.
+   Under "Start Your Journey". The room they are joining.

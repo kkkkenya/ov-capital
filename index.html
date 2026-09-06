@@ -65,7 +65,7 @@
   .ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .ph:hover img{transform:scale(1.045);}
   .ph--video{width:100%;margin:0;aspect-ratio:11/9;border:none;background:none;box-shadow:none;animation:none;border-radius:0;}
-  .ph--journal{margin-bottom:48px;}
+  .ph--journal{max-width:520px;margin:0 auto 48px;}
 
   /* ---------- WATCH ---------- */
   .watch{padding:120px 0;border-bottom:1px solid var(--line);text-align:center;}
@@ -86,7 +86,7 @@
   .ph--offerings{margin-bottom:60px;}
   .ph--why{margin-top:28px;max-width:340px;}
   .ph--promise{max-width:520px;margin:52px auto 0;}
-  .ph-row--duo{grid-template-columns:1fr 1fr;max-width:880px;margin:52px auto 0;}
+  .ph--community{max-width:520px;margin:52px auto 0;}
 
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
@@ -647,8 +647,8 @@
       <h2>Our trade journal — logged, scored, and public.</h2>
       <p class="journal__lead">Every trade we take is logged here in real time — entries, exits, risk, chart screenshots, and P&amp;L broken down by week, month, quarter, and year. No cherry-picking, no hindsight edits.</p>
     </div>
-    <figure class="ph ph--wide ph--journal reveal" data-slot="journal">
-      <img src="images/hero-trading-desk.jpg" alt="Laptop showing TradingView charts with the Nairobi skyline behind" loading="lazy" style="--pos:center 55%" onerror="this.remove()">
+    <figure class="ph ph--portrait ph--journal reveal" data-slot="journal">
+      <img src="images/community-discord-call.jpg" alt="Trading desk running a live Discord coaching call on triple monitors" loading="lazy" onerror="this.remove()">
     </figure>
     <div class="journal__frame reveal" id="journal-app-root"></div>
     <div class="journal__foot">
@@ -678,14 +678,9 @@
       <a href="#" class="btn btn--primary">Start Your Journey</a>
       <a href="#" class="btn btn--ghost">Talk to a Mentor</a>
     </div>
-    <div class="ph-row ph-row--duo">
-      <figure class="ph ph--portrait reveal" data-slot="community">
-        <img src="images/community-conference.jpg" alt="OVCapital live trading conference with a packed audience" loading="lazy" onerror="this.remove()">
-      </figure>
-      <figure class="ph ph--portrait reveal" data-slot="community-discord">
-        <img src="images/community-discord-call.jpg" alt="Live Discord coaching call with triple-monitor trading setup" loading="lazy" onerror="this.remove()">
-      </figure>
-    </div>
+    <figure class="ph ph--portrait ph--community reveal" data-slot="community">
+      <img src="images/community-conference.jpg" alt="OVCapital live trading conference with a packed audience" loading="lazy" onerror="this.remove()">
+    </figure>
     <div class="community__marquee">
       <span>Trade Smart. Invest Wisely.</span>
       <span>Where Education Meets Opportunity.</span>
