@@ -95,7 +95,7 @@
   .ph--offerings{margin-bottom:60px;}
   .ph--why{margin-top:28px;max-width:340px;}
   .ph--promise{max-width:520px;margin:52px auto 0;}
-  .ph--community{max-width:520px;margin:52px auto 0;}
+  .ph-row--duo{grid-template-columns:1fr 1fr;max-width:880px;margin:52px auto 0;}
 
   /* ---------- reveal ---------- */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
@@ -681,9 +681,14 @@
       <a href="#" class="btn btn--primary">Start Your Journey</a>
       <a href="#" class="btn btn--ghost">Talk to a Mentor</a>
     </div>
-    <figure class="ph ph--portrait ph--community reveal" data-slot="community">
-      <img src="images/community-conference.jpg" alt="OVCapital live trading conference with a packed audience" loading="lazy" onerror="this.remove()">
-    </figure>
+    <div class="ph-row ph-row--duo">
+      <figure class="ph ph--portrait reveal" data-slot="community">
+        <img src="images/community-conference.jpg" alt="OVCapital live trading conference with a packed audience" loading="lazy" onerror="this.remove()">
+      </figure>
+      <figure class="ph ph--portrait reveal" data-slot="community-discord">
+        <img src="images/community-discord-call.jpg" alt="Live Discord coaching call with triple-monitor trading setup" loading="lazy" onerror="this.remove()">
+      </figure>
+    </div>
     <div class="community__marquee">
       <span>Trade Smart. Invest Wisely.</span>
       <span>Where Education Meets Opportunity.</span>

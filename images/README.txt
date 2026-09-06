@@ -40,6 +40,10 @@ PROMISE — community-meetup.jpg (portrait frame)
    The classroom/workshop session.
    Under "we build skilled traders" — education proven, not promised.
 
-COMMUNITY — community-conference.jpg (portrait frame)
-   The live conference hall, packed audience, you on stage.
-   Under "Start Your Journey". The room they are joining.
+COMMUNITY (2 side by side, portrait frames) —
+   community-conference.jpg — the live conference hall, packed
+      audience. The big-room energy.
+   community-discord-call.jpg — the Discord coaching room:
+      students on screen, charts on triple monitors, KL towers
+      outside. The week-to-week reality. Together they say:
+      big events AND live online rooms.
