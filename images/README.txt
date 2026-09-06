@@ -7,9 +7,10 @@ for fast loading.
 
 SITE ORDER (top to bottom):
 
-HERO — mt5-profits-phone.mp4 (+ mt5-profits-poster.jpg)
+WATCH (own section, after the programs) — mt5-profits-phone.mp4
+   (+ mt5-profits-poster.jpg)
    Rotating phone with live MT5 Gold positions. Autoplays muted on
-   loop, right side of the homepage headline (~70% of the hero).
+   loop, large and centered. The proof stage of the page.
 
 JOURNAL — hero-trading-desk.jpg (landscape frame)
    Laptop with TradingView charts + Nairobi skyline.
