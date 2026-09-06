@@ -37,10 +37,12 @@ WHY — why-discipline.jpg (portrait frame)
    Handwritten journal + watch + laptop.
    Beside "consistency beats luck". The most on-message photo here.
 
-PROMISE — community-meetup.jpg (portrait frame)
-   The classroom/workshop session.
-   Under "we build skilled traders" — education proven, not promised.
+PROMISE — text only, no photo.
+   The quote carries this section; visuals resume below.
 
-COMMUNITY — community-conference.jpg (portrait frame)
-   The live conference hall, packed audience, you on stage.
-   Under "Start Your Journey". The room they are joining.
+COMMUNITY (2 side by side, portrait frames) —
+   community-meetup.jpg — the classroom workshop session.
+      The week-to-week grind.
+   community-conference.jpg — the live conference hall, packed
+      audience. The big-room energy. Together: the community
+      at both scales.
